@@ -1,0 +1,12 @@
+﻿@inherits InputText
+
+<LabelledComponent Label=@Label Context=Id>
+	@if (State.Mode != XosFormMode.View)
+	{
+		<input id=@Id class=@CssClass @onchange=@(e => this.CurrentValueAsString = (string)e.Value) value=@Value />
+	}
+	else
+	{
+		<input id=@Id class=@CssClass value=@Value readonly />
+	}
+</LabelledComponent>

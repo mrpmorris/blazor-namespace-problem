@@ -1,0 +1,12 @@
+﻿@typeparam TModel
+
+<fieldset>
+	<CascadingValue Value=State>
+		<EditForm Model=Model>
+			@if (@ChildContent is not null)
+			{
+				@ChildContent(State)
+			}
+		</EditForm>
+	</CascadingValue>
+</fieldset>

@@ -1,0 +1,9 @@
+﻿@page "/"
+@using Xoserve.Components.Forms
+Mode = @Mode
+<br />
+<button @onclick=ToggleFormMode>Toggle</button>
+<XosForm Model=Editable Mode=Mode Context=Form>
+	Form
+	<XosInputText @bind-Value=Editable.FirstName Label="First name" />
+</XosForm>
