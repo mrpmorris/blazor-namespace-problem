@@ -1,4 +1,6 @@
-﻿namespace Xoserve.Components.Forms
+﻿using Xoserve.Components.Forms;
+
+namespace Fubar
 {
 	public class XosFormState
 	{

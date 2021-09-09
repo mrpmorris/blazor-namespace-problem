@@ -1,0 +1,22 @@
+﻿@inherits InputBase<TValue>
+@typeparam TValue
+	<LabelledComponent Label=@Label Context=Id>
+		@if (State.Mode != XosFormMode.View)
+		{
+			<CascadingValue Value=this>
+				<select id=@Id
+						class=@(CssClass + " form-control")
+						@ref=SelectorElement
+						@onchange=SelectedIndexChangedAsync>
+					@if (ChildContent is not null)
+					{
+						@ChildContent
+					}
+				</select>
+			</CascadingValue>
+		}
+		else
+		{
+			<input id=@Id value=@Value readonly @attributes=AdditionalAttributes class=@(CssClass  + " form-control") />
+		}
+	</LabelledComponent>

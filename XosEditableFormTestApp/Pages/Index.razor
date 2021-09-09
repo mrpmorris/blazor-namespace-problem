@@ -1,9 +1,12 @@
 ﻿@page "/"
 
-Mode = @Mode
-<br />
+Mode = @Mode<br />
+Name = @Editable.FirstName @Editable.LastName<br/>
 <button @onclick=ToggleFormMode>Toggle</button>
-<XosForm Model=Editable Mode=Mode Context=Form>
-	Form
-	<XosInputText @bind-Value=Editable.FirstName Label="First name" />
+<XosForm Model=Editable Mode=Mode>
+	<XosInputText @bind-Value=Editable.FirstName Label="First name"/>
+	<XosInputSelect @bind-Value=Editable.LastName Label="Last name">
+		<XosInputSelectOption Value=@("Holnes")/>
+		<XosInputSelectOption Value=@("Monkhouse")/>
+	</XosInputSelect>
 </XosForm>

@@ -13,7 +13,6 @@ namespace XosEditableFormTestApp.Pages
 			Mode = Mode == XosFormMode.Edit
 				? XosFormMode.View
 				: XosFormMode.Edit;
-			Editable.FirstName += "!";
 		}
 	}
 }
